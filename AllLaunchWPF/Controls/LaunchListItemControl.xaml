@@ -64,14 +64,15 @@
                             </Border>
                         </Grid>
 
-                        <!-- Hover -->
                         <ControlTemplate.Triggers>
+                            <!-- Hover -->
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="Container" Property="Background" Value="{StaticResource BackgroundAbasementBrush}" />
                             </Trigger>
                             <Trigger  Property="IsMouseOver" Value="False" >
                                 <Setter TargetName="Container" Property="Background" Value="Transparent" />
                             </Trigger>
+                            <!-- Selected effect -->
                             <DataTrigger Binding="{Binding IsSelected}" Value="True">
                                 <Setter Property="Background" TargetName="Container" Value="{StaticResource BackgroundAbasementBrush}"/>
                                 <Setter Property="Foreground" TargetName="Name" Value="{StaticResource ActiveFocusHoverBrush}"/>

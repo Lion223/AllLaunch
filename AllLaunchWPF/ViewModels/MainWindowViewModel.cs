@@ -5,7 +5,7 @@ using System.Windows.Input;
 namespace AllLaunchWPF
 {
     /// <summary>
-    /// ViewModel for the custom window
+    /// A view model for the custom window
     /// </summary>
     public class MainWindowViewModel : BaseViewModel
     {

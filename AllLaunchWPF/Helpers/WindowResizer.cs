@@ -6,6 +6,8 @@ using System.Windows.Media;
 
 namespace AllLaunchWPF
 {
+    // https://github.com/angelsix/fasetto-word/blob/develop/Source/Fasetto.Word/Window/WindowResizer.cs
+
     /// <summary>
     /// The dock position of the window
     /// </summary>

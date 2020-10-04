@@ -5,6 +5,7 @@ using System.Windows.Controls;
 namespace AllLaunchWPF
 {
     // https://gist.github.com/angularsen/90040fb174f71c5ab3ad
+
     public class MarginSetter
     {
         private static Thickness GetLastItemMargin(Panel obj)

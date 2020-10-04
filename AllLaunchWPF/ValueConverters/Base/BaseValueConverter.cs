@@ -5,6 +5,10 @@ using System.Windows.Markup;
 
 namespace AllLaunchWPF
 {
+    /// <summary>
+    /// Base value converter class 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public abstract class BaseValueConverter<T> : MarkupExtension, IValueConverter
         where T : class, new()
     {

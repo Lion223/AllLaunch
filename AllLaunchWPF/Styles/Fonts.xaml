@@ -2,9 +2,12 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:AllLaunchWPF">
 
+    <!-- Used custom fonts -->
     <FontFamily x:Key="MontserratRegular">pack://application:,,,/Fonts/#Montserrat Regular</FontFamily>
     <FontFamily x:Key="MontserratBold">pack://application:,,,/Fonts/#Montserrat Bold</FontFamily>
 
+    <!-- Design font styles of the app -->
+    
     <Style TargetType="{x:Type Control}" x:Key="Header1Regular">
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
         <Setter Property="FontSize" Value="20" />
@@ -55,6 +58,7 @@
         <Setter Property="FontSize" Value="10" />
     </Style>
 
+    <!-- Style default fonts for the controls -->
     <Style TargetType="{x:Type Label}" BasedOn="{StaticResource Paragraph1Regular}" />
     <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource Paragraph1RegularTextBlock}" />
     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource Paragraph1Regular}" />

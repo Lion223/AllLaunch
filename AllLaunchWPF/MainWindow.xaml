@@ -69,6 +69,7 @@
         </ControlTemplate>
     </Window.Template>
 
+    <!-- Window chrome settings -->
     <WindowChrome.WindowChrome>
         <WindowChrome 
             ResizeBorderThickness="{Binding ResizeBorderThickness}" 
@@ -78,6 +79,7 @@
             />
     </WindowChrome.WindowChrome>
 
+    <!-- Frame of the main window that visualizes pages-->
     <Grid>
         <Frame x:Name="MainFrame" Content="{Binding ApplicationViewModel.CurrentPage, 
                                                     Source={x:Static local:ViewModelLocator.Instance}, 

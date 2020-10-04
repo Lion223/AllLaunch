@@ -10,13 +10,18 @@
       d:DesignWidth="{Binding MinWidth, FallbackValue=396}"
       Title="LaunchListPage">
 
+    <!-- The page content-->
     <Grid Background="{StaticResource BackgroundMainBrush}">
         <Grid.RowDefinitions>
+            <!-- Sort menu bar -->
             <RowDefinition Height="Auto" />
+            <!-- The launch list -->
             <RowDefinition Height="*" />
+            <!-- The launch list menu bar-->
             <RowDefinition Height="{Binding LaunchListMenuBarHeight, FallbackValue=48}"/>
         </Grid.RowDefinitions>
 
+        <!-- Sort menu bar implementation -->
         <Grid Grid.Row="0">
             <Border Padding="20 10">
                 <StackPanel Orientation="Horizontal">
@@ -29,13 +34,16 @@
             </Border>
         </Grid>
 
+        <!-- The launch list control -->
         <Grid Grid.Row="1" >
             <local:LaunchListControl />
         </Grid>        
 
+        <!-- The launch list menu bar implementation -->
         <Grid Grid.Row="2" Background="{StaticResource BackgroundElevation1Brush}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
+                <!-- Center the buttons -->
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>

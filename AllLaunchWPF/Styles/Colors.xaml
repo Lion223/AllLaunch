@@ -2,6 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:AllLaunchWPF">
 
+    <!-- Design colors of the app -->
+    
     <Color x:Key="BackgroundMain">#222222</Color>
     <SolidColorBrush x:Key="BackgroundMainBrush" Color="{StaticResource BackgroundMain}" />
 

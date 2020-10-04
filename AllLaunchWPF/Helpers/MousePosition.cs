@@ -3,6 +3,9 @@ using System.Windows.Input;
 
 namespace AllLaunchWPF
 {
+    /// <summary>
+    /// The helper class that allows to locate the cursor position within a window
+    /// </summary>
     public static class MousePosition
     {
         public static Point GetMousePosition(Window window)

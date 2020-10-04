@@ -1,0 +1,63 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:AllLaunchWPF">
+
+    <FontFamily x:Key="MontserratRegular">pack://application:,,,/Fonts/#Montserrat Regular</FontFamily>
+    <FontFamily x:Key="MontserratBold">pack://application:,,,/Fonts/#Montserrat Bold</FontFamily>
+
+    <Style TargetType="{x:Type Control}" x:Key="Header1Regular">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
+        <Setter Property="FontSize" Value="20" />
+    </Style>
+    
+    <Style TargetType="{x:Type Control}" x:Key="Header1Bold">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
+        <Setter Property="FontSize" Value="24" />
+    </Style>
+
+    <Style TargetType="{x:Type Control}" x:Key="Header2Regular">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
+        <Setter Property="FontSize" Value="18" />
+    </Style>
+
+    <Style TargetType="{x:Type Control}" x:Key="Header3Regular">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
+        <Setter Property="FontSize" Value="10" />
+    </Style>
+
+    <Style TargetType="{x:Type Control}" x:Key="Paragraph1Regular">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+
+    <Style TargetType="{x:Type Control}" x:Key="Paragraph1Bold">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+
+    <Style TargetType="{x:Type Control}" x:Key="Paragraph2Bold">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
+        <Setter Property="FontSize" Value="12" />
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="Paragraph1RegularTextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="Header1RegularTextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
+        <Setter Property="FontSize" Value="20" />
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="Header3RegularTextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
+        <Setter Property="FontSize" Value="10" />
+    </Style>
+
+    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource Paragraph1Regular}" />
+    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource Paragraph1RegularTextBlock}" />
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource Paragraph1Regular}" />
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource Paragraph1Regular}" />
+    
+</ResourceDictionary>

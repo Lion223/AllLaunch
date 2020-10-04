@@ -1,0 +1,127 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\Icons\Logo\Favicon.ico</ApplicationIcon>
+    <AssemblyName>AllLaunch</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\Montserrat Bold 700.ttf" />
+    <None Remove="Fonts\Montserrat Regular 400.ttf" />
+    <None Remove="Images\Icons\Add.png" />
+    <None Remove="Images\Icons\Arguments.png" />
+    <None Remove="Images\Icons\Close.png" />
+    <None Remove="Images\Icons\Hover\Add.png" />
+    <None Remove="Images\Icons\Hover\Arguments.png" />
+    <None Remove="Images\Icons\Hover\Close.png" />
+    <None Remove="Images\Icons\Hover\Launch.png" />
+    <None Remove="Images\Icons\Hover\Load.png" />
+    <None Remove="Images\Icons\Hover\Logo.png" />
+    <None Remove="Images\Icons\Hover\Maximize.png" />
+    <None Remove="Images\Icons\Hover\Minimize.png" />
+    <None Remove="Images\Icons\Hover\Remove.png" />
+    <None Remove="Images\Icons\Hover\Save.png" />
+    <None Remove="Images\Icons\Hover\Update.png" />
+    <None Remove="Images\Icons\Launch.png" />
+    <None Remove="Images\Icons\Load.png" />
+    <None Remove="Images\Icons\Logo.png" />
+    <None Remove="Images\Icons\Maximize.png" />
+    <None Remove="Images\Icons\Minimize.png" />
+    <None Remove="Images\Icons\Placeholder.png" />
+    <None Remove="Images\Icons\Remove.png" />
+    <None Remove="Images\Icons\Save.png" />
+    <None Remove="Images\Icons\Update.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\Montserrat Bold 700.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Montserrat Regular 400.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Add.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Arguments.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Close.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Hover\Add.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Hover\Arguments.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Hover\Close.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Hover\Launch.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Hover\Load.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Hover\Logo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Hover\Maximize.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Hover\Minimize.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Hover\Remove.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Hover\Save.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Hover\Update.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Launch.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Load.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Logo\Logo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Maximize.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Minimize.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Placeholder.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Remove.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Save.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Update.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="2020.1.0" />
+    <PackageReference Include="Ninject" Version="3.3.4" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.2.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AllLaunchCore\AllLaunchCore.csproj" />
+  </ItemGroup>
+
+</Project>

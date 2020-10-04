@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:AllLaunchWPF">
+
+    <Color x:Key="BackgroundMain">#222222</Color>
+    <SolidColorBrush x:Key="BackgroundMainBrush" Color="{StaticResource BackgroundMain}" />
+
+    <Color x:Key="BackgroundElevation1">#282828</Color>
+    <SolidColorBrush x:Key="BackgroundElevation1Brush" Color="{StaticResource BackgroundElevation1}" />
+    
+    <Color x:Key="BackgroundElevation2">#515151</Color>
+    <SolidColorBrush x:Key="BackgroundElevation2Brush" Color="{StaticResource BackgroundElevation2}" />
+    
+    <Color x:Key="BackgroundAbasement">#1E1E1E</Color>
+    <SolidColorBrush x:Key="BackgroundAbasementBrush" Color="{StaticResource BackgroundAbasement}" />
+    
+    <Color x:Key="ActiveFocusHover">#E5E5E5</Color>
+    <SolidColorBrush x:Key="ActiveFocusHoverBrush" Color="{StaticResource ActiveFocusHover}" />
+    
+    <Color x:Key="AppStateRunning">#2D963E</Color>
+    <SolidColorBrush x:Key="AppStateRunningBrush" Color="{StaticResource AppStateRunning}" />
+    
+    <Color x:Key="AppStateError">#8A2828</Color>
+    <SolidColorBrush x:Key="AppStateErrorBrush" Color="{StaticResource AppStateError}" />
+    
+    <Color x:Key="AppStateInactive">#515151</Color>
+    <SolidColorBrush x:Key="AppStateInactiveBrush" Color="{StaticResource AppStateInactive}" />
+</ResourceDictionary>

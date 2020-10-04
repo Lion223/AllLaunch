@@ -1,0 +1,88 @@
+﻿<UserControl x:Class="AllLaunchWPF.LaunchListItemControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AllLaunchWPF"
+             xmlns:core="clr-namespace:AllLaunchCore;assembly=AllLaunchCore"
+             mc:Ignorable="d" 
+             MinHeight="64"
+             d:DesignHeight="64" d:DesignWidth="396">
+
+    <UserControl.Resources>
+        <Style x:Key="ContentStyle" TargetType="{x:Type ContentControl}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ContentControl}">
+                        <!-- Content -->
+                        <Grid x:Name="Container" Background="Transparent">
+                            <Grid.ColumnDefinitions>
+                                <!-- Status bar -->
+                                <ColumnDefinition Width="Auto" />
+                                <!-- Content -->
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Status bar implementation -->
+                            <Border Grid.Column="0" Height="60" Width="10" Background="{Binding State, Converter={local:ApplicationStateValueConverter}}" />
+
+                            <!-- Content implementation -->
+                            <Border Grid.Column="1" Grid.ColumnSpan="2" Margin="20 0 0 0" Padding="0 13 10 10">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="24"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="24"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <!-- Application icon -->
+                                    <Image Grid.Column="0" Grid.Row="0" UseLayoutRounding="True" Source="{Binding NotImplemented, FallbackValue={StaticResource LaunchListItemPlaceholder}}" />
+                                    <!-- Application name -->
+                                    <TextBlock x:Name="Name"
+                                               Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" 
+                                               VerticalAlignment="Top" HorizontalAlignment="Left" 
+                                               Padding="10 0 0 0" 
+                                               LineStackingStrategy="BlockLineHeight" LineHeight="24" 
+                                               Style="{StaticResource Header1RegularTextBlock}"  
+                                               MaxWidth="300" Width="300" TextTrimming="CharacterEllipsis" 
+                                               Foreground="{StaticResource BackgroundElevation2Brush}" 
+                                               Text="{Binding Name}"/>
+                                    <!-- Application arguments -->
+                                    <TextBlock x:Name="Arguments"
+                                               Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" 
+                                               VerticalAlignment="Top" HorizontalAlignment="Left" 
+                                               LineStackingStrategy="BlockLineHeight" LineHeight="10" 
+                                               Style="{StaticResource Header3RegularTextBlock}"
+                                               MaxWidth="100" Width="100" TextTrimming="CharacterEllipsis" 
+                                               Foreground="{StaticResource BackgroundElevation2Brush}" 
+                                               Text="{Binding Arguments}"/>
+                                </Grid>
+                            </Border>
+                        </Grid>
+
+                        <!-- Hover -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Container" Property="Background" Value="{StaticResource BackgroundAbasementBrush}" />
+                            </Trigger>
+                            <Trigger  Property="IsMouseOver" Value="False" >
+                                <Setter TargetName="Container" Property="Background" Value="Transparent" />
+                            </Trigger>
+                            <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                <Setter Property="Background" TargetName="Container" Value="{StaticResource BackgroundAbasementBrush}"/>
+                                <Setter Property="Foreground" TargetName="Name" Value="{StaticResource ActiveFocusHoverBrush}"/>
+                                <Setter Property="Foreground" TargetName="Arguments" Value="{StaticResource ActiveFocusHoverBrush}"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <ContentControl d:DataContext="{x:Static core:LaunchListItemDesignModel.Instance}" Style="{StaticResource ContentStyle}" />
+
+</UserControl>

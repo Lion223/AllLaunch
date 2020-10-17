@@ -14,5 +14,17 @@ namespace AllLaunchWPF
 
             DataContext = new MainWindowViewModel(this);
         }
+
+        private void AppWindow_Activated(object sender, System.EventArgs e)
+        {
+            // Hide overlay when focus is present
+            (DataContext as MainWindowViewModel).OverlayVisible = Visibility.Hidden;
+        }
+
+        private void AppWindow_Deactivated(object sender, System.EventArgs e)
+        {
+            // Show overlay when focus is not present
+            (DataContext as MainWindowViewModel).OverlayVisible = Visibility.Visible;
+        }
     }
 }

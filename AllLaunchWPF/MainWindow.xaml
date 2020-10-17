@@ -10,11 +10,13 @@
         WindowStyle="None"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
+        Activated="AppWindow_Activated"
+        Deactivated="AppWindow_Deactivated"
         Title="AllLaunch" 
-        MinHeight="{Binding MinHeight, FallbackValue=500}"
-        MinWidth="{Binding MinWidth, FallbackValue=396}" 
-        Height="{Binding MinHeight, FallbackValue=500}"
-        Width="{Binding MinWidth, FallbackValue=396}" >
+        MinHeight="{Binding MinimalHeight, FallbackValue=500}"
+        MinWidth="{Binding MinimalWidth, FallbackValue=396}" 
+        Height="{Binding MinimalHeight, FallbackValue=500}"
+        Width="{Binding MinimalWidth, FallbackValue=396}" >
 
     <!-- Override of default template of the window -->
     <Window.Template>
@@ -57,6 +59,15 @@
                                 <Button Style="{StaticResource CloseButton}" Command="{Binding CloseCommand}" />
                             </StackPanel>
                         </Grid>
+
+                        <!-- Overlay -->
+                        <Border Visibility="{Binding OverlayVisible, FallbackValue=Hidden}"
+                            Grid.Row="1" 
+                            Grid.RowSpan="2" 
+                            Opacity=".6" 
+                            Panel.ZIndex="1">
+                            <Border Background="{StaticResource BackgroundAbasementBrush}" />
+                        </Border>
                         
                         <!-- Content description (pages) -->
                         <Border Grid.Row="1">
@@ -80,10 +91,10 @@
     </WindowChrome.WindowChrome>
 
     <!-- Frame of the main window that visualizes pages-->
-    <Grid>
+    <Border>
         <Frame x:Name="MainFrame" Content="{Binding ApplicationViewModel.CurrentPage, 
                                                     Source={x:Static local:ViewModelLocator.Instance}, 
                                                     Converter={local:ApplicationPageValueConverter}}" />
-    </Grid>
+    </Border>
 
 </Window>

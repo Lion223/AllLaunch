@@ -12,9 +12,11 @@
     <None Remove="Fonts\Montserrat Bold 700.ttf" />
     <None Remove="Fonts\Montserrat Regular 400.ttf" />
     <None Remove="Images\Icons\Add.png" />
+    <None Remove="Images\Icons\ApplicationIconPlaceholder.png" />
     <None Remove="Images\Icons\Arguments.png" />
     <None Remove="Images\Icons\Close.png" />
     <None Remove="Images\Icons\Hover\Add.png" />
+    <None Remove="Images\Icons\Hover\ApplicationIconPlaceholder.png" />
     <None Remove="Images\Icons\Hover\Arguments.png" />
     <None Remove="Images\Icons\Hover\Close.png" />
     <None Remove="Images\Icons\Hover\Launch.png" />
@@ -30,7 +32,6 @@
     <None Remove="Images\Icons\Logo.png" />
     <None Remove="Images\Icons\Maximize.png" />
     <None Remove="Images\Icons\Minimize.png" />
-    <None Remove="Images\Icons\Placeholder.png" />
     <None Remove="Images\Icons\Remove.png" />
     <None Remove="Images\Icons\Save.png" />
     <None Remove="Images\Icons\Update.png" />
@@ -46,6 +47,9 @@
     <Resource Include="Images\Icons\Add.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\Icons\ApplicationIconPlaceholder.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Icons\Arguments.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -53,6 +57,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Icons\Hover\Add.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\Hover\ApplicationIconPlaceholder.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Icons\Hover\Arguments.png">
@@ -100,9 +107,6 @@
     <Resource Include="Images\Icons\Minimize.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Icons\Placeholder.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Images\Icons\Remove.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -117,11 +121,28 @@
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="2020.1.0" />
     <PackageReference Include="Ninject" Version="3.3.4" />
-    <PackageReference Include="PropertyChanged.Fody" Version="3.2.9" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.2.9">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AllLaunchCore\AllLaunchCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Dialogs\AddBox\AddBoxDialogControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Dialogs\AddBox\AddBoxDialogControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DialogWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 
 </Project>

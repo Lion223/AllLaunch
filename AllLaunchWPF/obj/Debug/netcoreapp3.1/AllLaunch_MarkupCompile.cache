@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 W:\Sources\Code\C#\AllLaunch\AllLaunchWPF\App.xaml
-8-348794355
+14-643999734
 
-141545140306
+23500684740
 1961743908320
-Controls\LaunchListControl.xaml;Controls\LaunchListItemControl.xaml;MainWindow.xaml;Pages\LaunchListPage.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\Images.xaml;
+Controls\DropContent.xaml;Controls\LaunchListControl.xaml;Controls\LaunchListItemControl.xaml;Dialogs\AddBox\AddBoxDialogControl.xaml;Dialogs\MessageBoxDialogControl.xaml;DialogWindow.xaml;MainWindow.xaml;Pages\LaunchListPage.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\Images.xaml;Styles\Scrollbar.xaml;Styles\TextBox.xaml;
 
 False
 

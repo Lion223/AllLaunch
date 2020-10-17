@@ -10,6 +10,9 @@
                 <ResourceDictionary Source="Styles/Fonts.xaml" />
                 <ResourceDictionary Source="Styles/Buttons.xaml" />
                 <ResourceDictionary Source="Styles/Images.xaml" />
+                <ResourceDictionary Source="Styles/Scrollbar.xaml" />
+                <ResourceDictionary Source="Styles/TextBox.xaml" />
+                
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

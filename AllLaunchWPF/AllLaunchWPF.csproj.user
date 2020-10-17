@@ -9,10 +9,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Controls\DropContent.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Controls\LaunchListControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\LaunchListItemControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Dialogs\MessageBoxDialogControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\LaunchListPage.xaml.cs">
@@ -20,10 +26,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Controls\DropContent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Controls\LaunchListControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\LaunchListItemControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Dialogs\AddBox\AddBoxDialogControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Dialogs\MessageBoxDialogControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DialogWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\LaunchListPage.xaml">
@@ -39,6 +57,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\Images.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Scrollbar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\TextBox.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

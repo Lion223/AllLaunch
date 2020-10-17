@@ -1,0 +1,57 @@
+﻿<local:BaseAddBoxDialogUserControl x:Class="AllLaunchWPF.AddBoxDialogControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AllLaunchWPF"
+             xmlns:core="clr-namespace:AllLaunchCore;assembly=AllLaunchCore"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d"          
+             >
+    
+    <StackPanel Background="Transparent" d:DataContext="{x:Static core:AddBoxDialogDesignModel.Instance}" 
+                Orientation="Vertical"
+                >
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="0" Grid.Row="0" Content="Name:" Padding="0" VerticalContentAlignment="Center" Foreground="{StaticResource BackgroundElevation2Brush}" />
+            <Label Grid.Column="0" Grid.Row="2" Content="Path to .exe:" Padding="0" VerticalContentAlignment="Center" Foreground="{StaticResource BackgroundElevation2Brush}" />
+            <Label Grid.Column="0" Grid.Row="4" Content="Arguments:" Padding="0" VerticalContentAlignment="Center" Foreground="{StaticResource BackgroundElevation2Brush}" />
+
+            <TextBox Grid.Column="2" Grid.Row="0" Text="{Binding Application.Name}" VerticalAlignment="Center" />
+            <TextBox Grid.Column="2" Grid.Row="2" Text="{Binding Application.Path}" CaretIndex="{x:Static system:Int32.MaxValue}" VerticalAlignment="Center" />
+            <TextBox Grid.Column="2" Grid.Row="4" Text="{Binding Application.Arguments}" VerticalAlignment="Center" />
+
+            <Button Grid.Column="4" Grid.Row="2" Content="{Binding BrowseText}" Command="{Binding BrowseCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:BaseAddBoxDialogUserControl}}}" />
+
+        </Grid>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 20 0 0" >
+            <Button Command="{Binding CloseCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:BaseAddBoxDialogUserControl}}}"
+                    Content="{Binding CancelText}" 
+                    Margin="0 0 20 0"
+                    />
+            <Button Command="{Binding AddCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:BaseAddBoxDialogUserControl}}}"
+                    Content="{Binding AddText}" 
+                    />
+        </StackPanel>
+
+    </StackPanel>
+        
+</local:BaseAddBoxDialogUserControl>

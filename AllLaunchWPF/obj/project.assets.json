@@ -1238,8 +1238,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "Ninject": "3.3.4",
-          "PropertyChanged.Fody": "3.2.9"
+          "Ninject": "3.3.4"
         },
         "compile": {
           "bin/placeholder/AllLaunchCore.dll": {}
@@ -4672,6 +4671,7 @@
             "version": "[3.3.4, )"
           },
           "PropertyChanged.Fody": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[3.2.9, )"
           }
@@ -4694,7 +4694,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

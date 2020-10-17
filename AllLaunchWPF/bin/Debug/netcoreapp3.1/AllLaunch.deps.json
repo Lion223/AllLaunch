@@ -718,8 +718,7 @@
       },
       "AllLaunchCore/1.0.0": {
         "dependencies": {
-          "Ninject": "3.3.4",
-          "PropertyChanged.Fody": "3.2.9"
+          "Ninject": "3.3.4"
         },
         "runtime": {
           "AllLaunchCore.dll": {}

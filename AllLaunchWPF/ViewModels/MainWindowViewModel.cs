@@ -5,7 +5,7 @@ using System.Windows.Input;
 namespace AllLaunchWPF
 {
     /// <summary>
-    /// A view model for the custom window
+    /// A view model for the main window
     /// </summary>
     public class MainWindowViewModel : BaseViewModel
     {
@@ -26,7 +26,7 @@ namespace AllLaunchWPF
         /// <summary>
         /// Original width of the window (exclude margin)
         /// </summary>
-        private double _minWidth = 396;
+        private double _minimalWidth = 396;
 
         #endregion
 
@@ -36,17 +36,17 @@ namespace AllLaunchWPF
         /// Minimal size of the window
         /// Width has to include margin from the both sides to have designed width
         /// </summary>
-        public double MinHeight { get; set; } = 500;
-        public double MinWidth
+        public double MinimalHeight { get; set; } = 500;
+        public double MinimalWidth
         {
-            get => _minWidth + (OuterMarginSize * 2);
-            set => _minWidth = value;
+            get => _minimalWidth + (OuterMarginSize * 2);
+            set => _minimalWidth = value;
         }
         /// <summary>
         /// Resize cursor properties
         /// </summary>
         public bool Borderless => (_window.WindowState == WindowState.Maximized || _dockPosition != WindowDockPosition.Undocked);
-        public int ResizeBorderSize => Borderless ? 0 : _outerMarginSize;
+        public int ResizeBorderSize => Borderless ? 0 : 5;
         public Thickness ResizeBorderThickness => new Thickness(ResizeBorderSize + OuterMarginSize);
         public int OuterMarginSize
         {
@@ -59,6 +59,10 @@ namespace AllLaunchWPF
         /// </summary>
         public double TitleHeight { get; set; } = 48;
         public GridLength TitleHeightGridLength => new GridLength(TitleHeight + ResizeBorderSize);
+        /// <summary>
+        /// Dimmable overlay visibility
+        /// </summary>
+        public Visibility OverlayVisible { get; set; } = Visibility.Hidden;
 
         #endregion
 
@@ -116,7 +120,7 @@ namespace AllLaunchWPF
             OnPropertyChanged(nameof(ResizeBorderThickness));
             OnPropertyChanged(nameof(OuterMarginSize));
             OnPropertyChanged(nameof(OuterMarginSizeThickness));
-            OnPropertyChanged(nameof(MinWidth));
+            OnPropertyChanged(nameof(MinimalWidth));
         }
 
         #endregion

@@ -3,6 +3,7 @@
                     xmlns:local="clr-namespace:AllLaunchWPF">
 
     <!-- Placeholder for the app icon -->
-    <BitmapImage x:Key="LaunchListItemPlaceholder" UriSource="../Images/Icons/Placeholder.png" />
+    <BitmapImage x:Key="LaunchListItemPlaceholder" UriSource="../Images/Icons/ApplicationIconPlaceholder.png" />
+    <BitmapImage x:Key="LaunchListItemPlaceholderHover" UriSource="../Images/Icons/Hover/ApplicationIconPlaceholder.png" />
 
 </ResourceDictionary>

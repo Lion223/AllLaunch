@@ -1,10 +1,10 @@
-W:\Sources\Code\C#\AllLaunch\AllLaunchCore\obj\Debug\netcoreapp3.1\AllLaunchCore.csprojAssemblyReference.cache
-W:\Sources\Code\C#\AllLaunch\AllLaunchCore\obj\Debug\netcoreapp3.1\AllLaunchCore.AssemblyInfoInputs.cache
-W:\Sources\Code\C#\AllLaunch\AllLaunchCore\obj\Debug\netcoreapp3.1\AllLaunchCore.AssemblyInfo.cs
 W:\Sources\Code\C#\AllLaunch\AllLaunchCore\bin\Debug\netcoreapp3.1\AllLaunchCore.deps.json
 W:\Sources\Code\C#\AllLaunch\AllLaunchCore\bin\Debug\netcoreapp3.1\AllLaunchCore.dll
 W:\Sources\Code\C#\AllLaunch\AllLaunchCore\bin\Debug\netcoreapp3.1\AllLaunchCore.pdb
-W:\Sources\Code\C#\AllLaunch\AllLaunchCore\obj\Debug\netcoreapp3.1\AllLaunchCore.dll
-W:\Sources\Code\C#\AllLaunch\AllLaunchCore\obj\Debug\netcoreapp3.1\AllLaunchCore.pdb
+W:\Sources\Code\C#\AllLaunch\AllLaunchCore\obj\Debug\netcoreapp3.1\AllLaunchCore.AssemblyInfoInputs.cache
+W:\Sources\Code\C#\AllLaunch\AllLaunchCore\obj\Debug\netcoreapp3.1\AllLaunchCore.AssemblyInfo.cs
 W:\Sources\Code\C#\AllLaunch\AllLaunchCore\obj\Debug\netcoreapp3.1\AllLaunchCore.csproj.CoreCompileInputs.cache
 W:\Sources\Code\C#\AllLaunch\AllLaunchCore\obj\Debug\netcoreapp3.1\AllLaunchCore.csproj.Fody.CopyLocal.cache
+W:\Sources\Code\C#\AllLaunch\AllLaunchCore\obj\Debug\netcoreapp3.1\AllLaunchCore.dll
+W:\Sources\Code\C#\AllLaunch\AllLaunchCore\obj\Debug\netcoreapp3.1\AllLaunchCore.pdb
+W:\Sources\Code\C#\AllLaunch\AllLaunchCore\obj\Debug\netcoreapp3.1\AllLaunchCore.csprojAssemblyReference.cache

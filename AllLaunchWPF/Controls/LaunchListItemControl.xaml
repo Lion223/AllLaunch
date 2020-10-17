@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:AllLaunchWPF"
              xmlns:core="clr-namespace:AllLaunchCore;assembly=AllLaunchCore"
              mc:Ignorable="d" 
-             MinHeight="64"
-             d:DesignHeight="64" d:DesignWidth="396">
+             MinHeight="58"
+             d:DesignHeight="58" d:DesignWidth="396">
 
     <UserControl.Resources>
         <Style x:Key="ContentStyle" TargetType="{x:Type ContentControl}">
@@ -24,42 +24,40 @@
                             </Grid.ColumnDefinitions>
 
                             <!-- Status bar implementation -->
-                            <Border Grid.Column="0" Height="60" Width="10" Background="{Binding State, Converter={local:ApplicationStateValueConverter}}" />
+                            <Border Grid.Column="0" Height="54" Width="10" Background="{Binding State, Converter={local:ApplicationStateValueConverter}}" />
 
                             <!-- Content implementation -->
-                            <Border Grid.Column="1" Grid.ColumnSpan="2" Margin="20 0 0 0" Padding="0 13 10 10">
+                            <Border Grid.Column="1" Grid.ColumnSpan="2" Margin="15 10">
                                 <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="24"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                    </Grid.ColumnDefinitions>
-
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="24"/>
+                                        <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
 
-                                    <!-- Application icon -->
-                                    <Image Grid.Column="0" Grid.Row="0" UseLayoutRounding="True" Source="{Binding NotImplemented, FallbackValue={StaticResource LaunchListItemPlaceholder}}" />
-                                    <!-- Application name -->
-                                    <TextBlock x:Name="Name"
-                                               Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" 
-                                               VerticalAlignment="Top" HorizontalAlignment="Left" 
-                                               Padding="10 0 0 0" 
-                                               LineStackingStrategy="BlockLineHeight" LineHeight="24" 
-                                               Style="{StaticResource Header1RegularTextBlock}"  
-                                               MaxWidth="300" Width="300" TextTrimming="CharacterEllipsis" 
+                                    <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                        <!-- Application icon -->
+                                        <Image x:Name="AppIcon" Width="24" Height="24" HorizontalAlignment="Left" UseLayoutRounding="True" Source="{Binding NotImplemented, FallbackValue={StaticResource LaunchListItemPlaceholder}}" />
+                                        <!-- Application name -->
+                                        <TextBlock x:Name="Name"
+                                               Width="300"
+                                               Margin="5 0 0 0"
+                                               LineStackingStrategy="BlockLineHeight" LineHeight="22" 
+                                               Style="{StaticResource Header3BoldTextBlock}"  
+                                               TextTrimming="CharacterEllipsis" 
                                                Foreground="{StaticResource BackgroundElevation2Brush}" 
                                                Text="{Binding Name}"/>
+                                    </StackPanel>
+
                                     <!-- Application arguments -->
                                     <TextBlock x:Name="Arguments"
-                                               Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" 
-                                               VerticalAlignment="Top" HorizontalAlignment="Left" 
+                                               Grid.Row="1" 
+                                               HorizontalAlignment="Left" 
                                                LineStackingStrategy="BlockLineHeight" LineHeight="10" 
-                                               Style="{StaticResource Header3RegularTextBlock}"
-                                               MaxWidth="100" Width="100" TextTrimming="CharacterEllipsis" 
+                                               Style="{StaticResource Header4RegularTextBlock}"
+                                               TextTrimming="CharacterEllipsis" 
                                                Foreground="{StaticResource BackgroundElevation2Brush}" 
                                                Text="{Binding Arguments}"/>
+
                                 </Grid>
                             </Border>
                         </Grid>
@@ -74,9 +72,10 @@
                             </Trigger>
                             <!-- Selected effect -->
                             <DataTrigger Binding="{Binding IsSelected}" Value="True">
-                                <Setter Property="Background" TargetName="Container" Value="{StaticResource BackgroundAbasementBrush}"/>
-                                <Setter Property="Foreground" TargetName="Name" Value="{StaticResource ActiveFocusHoverBrush}"/>
-                                <Setter Property="Foreground" TargetName="Arguments" Value="{StaticResource ActiveFocusHoverBrush}"/>
+                                <Setter Property="Background" TargetName="Container" Value="{StaticResource BackgroundAbasementBrush}" />
+                                <Setter Property="Foreground" TargetName="Name" Value="{StaticResource ActiveFocusHoverBrush}" />
+                                <Setter Property="Foreground" TargetName="Arguments" Value="{StaticResource ActiveFocusHoverBrush}" />
+                                <Setter Property="Source" TargetName="AppIcon" Value="{StaticResource LaunchListItemPlaceholderHover}" />
                             </DataTrigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>

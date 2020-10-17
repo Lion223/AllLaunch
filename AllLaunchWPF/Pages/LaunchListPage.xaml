@@ -24,20 +24,25 @@
         <!-- Sort menu bar implementation -->
         <Grid Grid.Row="0">
             <Border Padding="20 10">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock 
-                    Text="Name" 
-                    Foreground="{StaticResource BackgroundElevation2Brush}"
-                    Margin="0 0 20 0"/>
-                    <TextBlock Text="Status" Foreground="{StaticResource BackgroundElevation2Brush}" />
+                <StackPanel Orientation="Horizontal" local:MarginSetter.Margin="0 0 20 0" local:MarginSetter.LastItemMargin="0">
+                    <Button x:Name="NameSortButton" Command="{Binding NameSortCommand}" Style="{StaticResource SortButton}" Content="Name" />
+                    <Button x:Name="StateSortButton" Command="{Binding StateSortCommand}" Style="{StaticResource SortButton}" Content="Status" />
                 </StackPanel>
             </Border>
         </Grid>
 
+
         <!-- The launch list control -->
-        <Grid Grid.Row="1" >
-            <local:LaunchListControl />
-        </Grid>        
+        <local:LaunchListControl Grid.Row="1" />
+
+        <local:DropContent 
+            Grid.Row="1" 
+            DataContext="{Binding NameSortPopupMenu}"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Visibility="{Binding NameSortMenuVisible, Converter={local:VisibilityValueConverter}}"
+            />
+
 
         <!-- The launch list menu bar implementation -->
         <Grid Grid.Row="2" Background="{StaticResource BackgroundElevation1Brush}">

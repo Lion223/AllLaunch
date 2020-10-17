@@ -29,6 +29,63 @@
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
     </Style>
 
+    <!-- Sorting dropmenu button -->
+    <Style TargetType="{x:Type Button}" x:Key="SortButton" BasedOn="{StaticResource Default}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Grid>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{TemplateBinding Content}" 
+                                        Foreground="{StaticResource BackgroundElevation2Brush}"
+                                        Padding="0 0 5 0" 
+                                        />        
+                            <Path VerticalAlignment="Center" Margin="0 2 0 0" Fill="{StaticResource BackgroundElevation2Brush}"
+                                Data="M 0,0 L 4,4 L 8,0 L 0,0" />
+                        </StackPanel>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!-- Default text button -->
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource Default}">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{StaticResource BackgroundElevation2Brush}" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border x:Name="Body"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}" 
+                            SnapsToDevicePixels="True">
+
+                        <TextBlock x:Name="Text"
+                                   Text="{TemplateBinding Content}"
+                                   Style="{StaticResource Paragraph1BoldTextBlock}"
+                                   Padding="{TemplateBinding Padding}"
+                                   SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                   />
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="Body" Value="{StaticResource BackgroundElevation1Brush}" />
+                            <Setter Property="Foreground" Value="{StaticResource ActiveFocusHoverBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" TargetName="Body" Value="Transparent" />
+                            <Setter Property="Foreground" Value="{StaticResource BackgroundElevation2Brush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <!-- Close app button style -->
     <Style TargetType="{x:Type Button}" x:Key="CloseButton" BasedOn="{StaticResource SystemIconButton}">
         <Style.Triggers>
@@ -54,7 +111,7 @@
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Content">
-                    <Setter.Value>
+                    <Setter.Value> 
                         <Image Source="../Images/Icons/Hover/Maximize.png" />
                     </Setter.Value>
                 </Setter>
